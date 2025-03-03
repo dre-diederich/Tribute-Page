@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-flat.css">
+    <title>Tribute to Harold Dolezal</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        :root {
+            --seafoam-dark: #89A8B2;     /* Darker blue-green */
+            --seafoam-medium: #B3C8CF;   /* Medium blue-green */
+            --seafoam-light: #E5E1DA;    /* Light beige */
+            --seafoam-lightest: #F1F0E8; /* Lightest beige */
+            --text-dark: #1D2025;        /* Kept your original dark text color */
+        }
+
+        body {
+            display: flex;
+            min-height: 100vh;
+            background-color: var(--seafoam-lightest);
+            color: var(--text-dark);
+            font-family: 'Dosis', sans-serif;
+        }
+
+        .sidebar {
+            width: 300px;
+            background-color: var(--seafoam-dark);
+            color: var(--text-dark);
+            padding: 20px;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.8);
+            font-family: 'Dosis', sans-serif;
+        }
+
+        .portrait {
+            width: 100%;
+            border-radius: 50%;
+            margin-bottom: 20px;
+            border: 3px solid var(--seafoam-light);
+        }
+
+        .sidebar h2 {
+            text-align: center;
+            margin-bottom: 15px;
+            color: var(--text-dark);
+        }
+
+        .sidebar p {
+            margin-bottom: 20px;
+            font-size: 1rem;
+            line-height: 1.4;
+            color: var(--text-dark);
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .dropdown {
+            margin-bottom: 10px;
+            border-radius: 4px;
+            overflow: hidden;
+            background-color: var(--seafoam-medium);
+        }
+
+        .dropdown-header {
+            background-color: var(--seafoam-medium);
+            color: var(--text-dark);
+            padding: 10px 15px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background-color 0.3s;
+        }
+
+        .dropdown-header:hover {
+            background-color: var(--seafoam-dark);
+        }
+
+        .dropdown-content {
+            background-color: var(--seafoam-lightest);
+            display: none;
+            border-top: 1px solid var(--seafoam-dark);
+            color: var(--text-dark);
+            padding: 10px;
+        }
+
+        .dropdown-content.active {
+            display: block;
+        }
+
+        .dropdown-content ul {
+            padding-left: 20px;
+        }
+
+        .dropdown-content li {
+            margin-bottom: 5px;
+        }
+
+        .main-content {
+            flex: 1;
+            padding: 40px;
+            overflow-y: auto;
+            background-color: var(--seafoam-light);
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            color: var(--text-dark);
+            border-bottom: 2px solid var(--seafoam-dark);
+            padding-bottom: 10px;
+            font-size: 2rem;
+        }
+
+        .main-content p {
+            margin-bottom: 20px;
+            line-height: 1.6;
+            color: var(--text-dark);
+        }
+
+        .quote {
+            font-style: italic;
+            border-left: 4px solid var(--seafoam-dark);
+            padding-left: 20px;
+            margin: 30px 0;
+            background-color: var(--seafoam-lightest);
+            padding: 15px 20px;
+            border-radius: 0 4px 4px 0;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                flex-direction: column;
+            }
+
+            .sidebar {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="sidebar">
+        <img src="https://d1rjyex4ui0ya6.cloudfront.net/obituaries/photos/9135/337335/67632f6ef9b4dfc7d0ad6fc017af7db3.jpg"
+            alt="Harold Dolezal" class="portrait">
+        <h2>Harold Dolezal</h2>
+        <p>World War Two US Army Veteran</p>
+
+        <div class="dropdown">
+            <div class="dropdown-header">
+                <span>Early Life</span>
+                <span class="icon">▼</span>
+            </div>
+            <div class="dropdown-content">
+                <ul>
+                    <li>Harold D. Dolezal was born April 21, 1915 at Belleville, Kansas</li>
+                    <li>Harold served with the United States Army from July 3, 1941 to May 24, 1945 during World War Two
+                    </li>
+                    <li></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="dropdown">
+            <div class="dropdown-header">
+                <span>Family</span>
+                <span class="icon">▼</span>
+            </div>
+            <div class="dropdown-content">
+                <p>He farmed in both Republic and Washington County for many years. He was a member of the American
+                    Legion and VFW (Veteran ). He was preceded in death by his parents, wife, Velma Dolezal, one step
+                    brother, Richard. He is survived by one son, Dale Dolezal and his wife Nancy of Downs, Ks., two
+                    daughters, Cheryl Diederich and her husband John of Greenleaf, Ks, Judy Kappel and her husband
+                    George of Abilene, Ks, 9 grandchildren, Dale Lee Dolezal, Chris Dolezal, Haley Devine, Denise
+                    Bargman, Tammy Enneking, Jeff Diederich, Amy Larson, Jeremy McNitt, Justin Wendt, 16 great
+                    grandchildren, one step sister, Nadene Stull of Grand Island, Nebr, other relatives and many
+                    friends.</p>
+            </div>
+        </div>
+
+        <div class="dropdown">
+            <div class="dropdown-header">
+                <span>Honorable Achievements</span>
+                <span class="icon">▼</span>
+            </div>
+            <div class="dropdown-content">
+                <ul>
+                    <li>Harold served with the United States Army from July 3, 1941 to May 24, 1945 during World War
+                        Two, serving in Southern France, Germany,Naples Foggia, Rome Arno, Algeria French Morrocco,
+                        Tunisia</li>
+                    <li>The Purple Heart (PH) is a United States military decoration awarded in the name of the
+                        president to those wounded or killed while serving, on or after 5 April 1917, with the U.S.
+                        military.</li>
+                    <li>Awarded </li>
+                    <li>Development of techniques for isolating radioactive isotopes</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="dropdown">
+            <div class="dropdown-header">
+                <span>Awards & Honors</span>
+                <span class="icon">▼</span>
+            </div>
+            <div class="dropdown-content">
+                <ul>
+                    <li>Nobel Prize in Physics (1903) - shared with Pierre Curie and Henri Becquerel</li>
+                    <li>Nobel Prize in Chemistry (1911) - first person to win Nobel Prizes in multiple sciences</li>
+                    <li>Davy Medal</li>
+                    <li>Matteucci Medal</li>
+                    <li>Multiple honorary degrees from universities worldwide</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="dropdown">
+            <div class="dropdown-header">
+                <span>Personal Life</span>
+                <span class="icon">▼</span>
+            </div>
+            <div class="dropdown-content">
+                <p></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <h1>A Kansas Hero's Story: Remembering Harold D. Dolezal</h1>
+
+        <p>Harold D. Dolezal embodied the greatest virtues of his generation—courage, dedication, and unwavering
+            commitment to his family and country. Born in 1915 in Belleville, Kansas, Harold answered his nation's call
+            during World War II, serving honorably in the United States Army from 1941 to 1945.</p>
+
+        <p> His military service took him across multiple theaters of war, from the shores of North Africa to the heart
+            of Europe, demonstrating remarkable bravery through campaigns in Southern France, Germany, Italy, Tunisia,
+            and beyond.</p>
+        <div class="quote">
+            <p><q>In every battle, there is a hero who faces the storm with unwavering courage. Your bravery will never
+                    fade, and your legacy will never be forgotten.</q><cite> -Unknown</cite></p>
+        </div>
+
+        <p>Just months after enlisting, Harold married the love of his life, Velma Hamil, beginning a beautiful family
+            journey that blessed them with three children: Dale, Cheryl, and Judy. Upon returning home, Harold channeled
+            his steadfast work ethic into farming across Republic and Washington County for many years, cultivating not
+            just the land but also deep roots in his community through his membership in the American Legion and VFW.
+        </p>
+
+        <p>During World War I, Marie recognized that X-rays could help locate shrapnel in wounded soldiers and save
+            lives. She established France's first military radiology center and created mobile X-ray units that came to
+            be known as "Little Curies." She personally drove these X-ray vehicles to the front lines, taught doctors
+            and nurses about the new technology, and even positioned the equipment herself.</p>
+
+        <div class="quote">
+            <p>"The greatest legacy one can pass on to one's children and grandchildren is not money or other material
+                things accumulated in one's life, but rather a legacy of character and faith." - Billy Graham</p>
+        </div>
+
+        <p>Though he departed this world in 2012 at the age of 97, Harold's legacy lives on through his children, nine
+            grandchildren, sixteen great-grandchildren, and the countless lives he touched with his quiet strength and
+            generous spirit.</p>
+    </div>
+
+    <script>
+        document.querySelectorAll('.dropdown-header').forEach(header => {
+            header.addEventListener('click', () => {
+                const content = header.nextElementSibling;
+                content.classList.toggle('active');
+
+                const icon = header.querySelector('.icon');
+                icon.textContent = content.classList.contains('active') ? '▲' : '▼';
+            });
+        });
+    </script>
+</body>
+
+</html>

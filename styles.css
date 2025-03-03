@@ -1,0 +1,67 @@
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+
+/* Base styles for mobile first */
+.tribute-content {
+    padding: 1rem;
+}
+
+/* Tablet styles */
+@media (min-width: 768px) {
+    .tribute-content {
+        padding: 2rem;
+        font-size: 1.1rem;
+    }
+}
+
+/* Desktop styles */
+@media (min-width: 1024px) {
+    .tribute-content {
+        padding: 3rem;
+        font-size: 1.2rem;
+    }
+}
+
+
+p {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+@media (min-width: 768px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+}
+
+.photo-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1rem;
+}
+
+/* For the main content layout */
+.tribute-layout {
+    display: flex;
+    flex-direction: column;
+}
+
+@media (min-width: 768px) {
+    .tribute-layout {
+        flex-direction: row;
+    }
+
+    .main-content {
+        flex: 2;
+    }
+
+    .sidebar {
+        flex: 1;
+    }
+}
